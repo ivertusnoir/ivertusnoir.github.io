@@ -763,3 +763,21 @@ html.is-about-open #about-page {
 	.slider-progress { width: 100%; }
 	.footer-inner { flex-direction: column; align-items: flex-start; gap: 28px; }
 }
+
+/* =========================================
+   About Page Visibility Override
+   ========================================= */
+/* Forces all text elements on the About page to bypass JS scroll animations and render instantly */
+
+#about-page .about-headline,
+#about-page .project-details,
+#about-page .project-description,
+#about-page .about-columns,
+#about-page p,
+#about-page h3,
+#about-page li {
+	opacity: 1 !important;
+	visibility: visible !important;
+	transform: none !important;
+	animation: none !important;
+}
