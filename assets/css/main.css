@@ -19,7 +19,6 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-/* Crimson Text Selection */
 ::selection {
 	background: var(--crimson);
 	color: #ffffff;
@@ -29,7 +28,6 @@
 	color: #ffffff;
 }
 
-/* Remove Native Browser Scrollbar Column */
 html, body {
 	scrollbar-width: none;
 	-ms-overflow-style: none;
@@ -58,13 +56,10 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	transition: opacity .38s var(--ease-io);
 }
-html.is-looping body {
-	opacity: 0;
-}
+html.is-looping body { opacity: 0; }
 
 img, video { display: block; max-width: 100%; }
 
-/* Display Hierarchy */
 h1, h2, h3, .loader-name, .footer-email {
 	margin: 0;
 	font-family: var(--font-display);
@@ -93,73 +88,7 @@ a:focus-visible, .media-strip:focus-visible {
 	outline-offset: 4px;
 }
 
-/* ---------- Loader (Gallery White + Heavy ANKARA, TR) ---------- */
-#loader { display: none; }
-.js #loader {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	position: fixed;
-	inset: 0;
-	z-index: 1000;
-	padding: clamp(24px, 3vw, 48px) var(--side) clamp(36px, 8vh, 90px);
-	background: #ffffff;
-	color: var(--ink);
-	transition: transform 1.6s var(--ease-io);
-	animation: loaderFail 0s 7.5s forwards;
-}
-#loader.done { transform: translateY(-100%); }
-.loader-top {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	width: 100%;
-}
-.loader-location {
-	font-family: var(--font-display);
-	font-weight: 700;
-	font-size: clamp(14px, 1.25vw, 18px);
-	letter-spacing: 0.06em;
-	text-transform: uppercase;
-	color: var(--ink);
-}
-.loader-bottom {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-end;
-	width: 100%;
-}
-.loader-name {
-	font-weight: 600;
-	font-size: clamp(2.1rem, 4.2vw, 5.8rem);
-	line-height: 0.95;
-	letter-spacing: -0.035em;
-	color: var(--crimson);
-}
-.loader-count {
-	font-family: var(--font-mono);
-	font-weight: 600;
-	font-size: clamp(1.8rem, 3.2vw, 4.2rem);
-	line-height: 1;
-	color: var(--ink);
-	font-variant-numeric: tabular-nums;
-}
-.loader-bar {
-	position: absolute;
-	left: 0; right: 0; bottom: 0;
-	height: 2px;
-	background: var(--line);
-}
-.loader-fill {
-	display: block;
-	width: 100%; height: 100%;
-	background: var(--crimson);
-	transform: scaleX(0);
-	transform-origin: left;
-}
-@keyframes loaderFail { to { visibility: hidden; } }
-
-/* ---------- Header (100% Opacity Crimson Brand + Custom Monogram) ---------- */
+/* ---------- Header ---------- */
 #header {
 	position: fixed;
 	top: 0; left: 0;
@@ -206,9 +135,7 @@ a:focus-visible, .media-strip:focus-visible {
 	flex-shrink: 0;
 }
 
-#nav {
-	justify-self: center;
-}
+#nav { justify-self: center; }
 #nav ul {
 	display: flex;
 	gap: clamp(24px, 2.8vw, 44px);
@@ -226,25 +153,17 @@ a:focus-visible, .media-strip:focus-visible {
 	position: relative;
 }
 #nav a:hover,
-#nav a.is-current {
-	color: var(--crimson);
-}
-.header-spacer {
-	justify-self: end;
-}
+#nav a.is-current { color: var(--crimson); }
+.header-spacer { justify-self: end; }
 
-/* ---------- View Switching (Main Work vs. Separate About Page) ---------- */
-html.is-about-open #home-view {
-	display: none;
-}
+/* ---------- View Switching ---------- */
+html.is-about-open #home-view { display: none; }
 #about-page {
 	display: none;
 	min-height: 82vh;
 	padding: clamp(140px, 18vh, 210px) 0 clamp(60px, 8vh, 100px);
 }
-html.is-about-open #about-page {
-	display: block;
-}
+html.is-about-open #about-page { display: block; }
 
 .about-hero {
 	padding: 0 var(--side);
@@ -258,10 +177,9 @@ html.is-about-open #about-page {
 	letter-spacing: -0.035em;
 	color: var(--ink);
 	max-width: 18ch;
+	will-change: transform, opacity;
 }
-.about-grid {
-	margin-bottom: clamp(56px, 8vh, 96px);
-}
+.about-grid { margin-bottom: clamp(56px, 8vh, 96px); }
 .about-columns {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -300,14 +218,10 @@ html.is-about-open #about-page {
 	height: auto;
 	transition: transform .35s var(--ease-out);
 }
-.back-to-work:hover {
-	color: var(--crimson);
-}
-.back-to-work:hover svg {
-	transform: translateX(-4px);
-}
+.back-to-work:hover { color: var(--crimson); }
+.back-to-work:hover svg { transform: translateX(-4px); }
 
-/* ---------- Hero (Lowercase 'v' + Noticeable Smooth Kinetic Scroll Arrow) ---------- */
+/* ---------- Hero ---------- */
 #banner {
 	position: relative;
 	display: flex;
@@ -317,7 +231,6 @@ html.is-about-open #about-page {
 	min-height: 100svh;
 	padding: clamp(110px, 14vh, 160px) var(--side) clamp(48px, 8vh, 96px);
 }
-
 .hero-statement {
 	width: 100%;
 	max-width: 100%;
@@ -330,14 +243,11 @@ html.is-about-open #about-page {
 	color: var(--ink);
 	will-change: transform, opacity;
 }
-
 .banner-footer {
 	display: flex;
 	justify-content: flex-end;
 	align-items: flex-end;
 }
-
-/* Noticeable Kinetic Motion Graphic Scroll Arrow */
 .scroll-arrow {
 	position: relative;
 	display: inline-flex;
@@ -349,12 +259,9 @@ html.is-about-open #about-page {
 	overflow: hidden;
 	transition: opacity 1.2s ease 1s, color .3s ease;
 }
-.scroll-arrow:hover {
-	color: var(--crimson);
-}
+.scroll-arrow:hover { color: var(--crimson); }
 .js .scroll-arrow { opacity: 0; }
 .ready .scroll-arrow { opacity: 1; }
-
 .scroll-arrow-track {
 	display: flex;
 	width: 22px;
@@ -368,29 +275,14 @@ html.is-about-open #about-page {
 	display: block;
 }
 @keyframes kineticArrowPattern {
-	0% {
-		transform: translate3d(0, -115%, 0) scaleY(0.85);
-		opacity: 0;
-	}
-	28% {
-		transform: translate3d(0, 0%, 0) scaleY(1);
-		opacity: 1;
-	}
-	62% {
-		transform: translate3d(0, 14%, 0) scaleY(1.04);
-		opacity: 1;
-	}
-	100% {
-		transform: translate3d(0, 118%, 0) scaleY(0.85);
-		opacity: 0;
-	}
+	0% { transform: translate3d(0, -115%, 0) scaleY(0.85); opacity: 0; }
+	28% { transform: translate3d(0, 0%, 0) scaleY(1); opacity: 1; }
+	62% { transform: translate3d(0, 14%, 0) scaleY(1.04); opacity: 1; }
+	100% { transform: translate3d(0, 118%, 0) scaleY(0.85); opacity: 0; }
 }
 
 /* ---------- Projects ---------- */
-.project {
-	padding: clamp(80px, 11vh, 140px) 0;
-}
-
+.project { padding: clamp(80px, 11vh, 140px) 0; }
 .project-header {
 	display: flex;
 	justify-content: space-between;
@@ -406,7 +298,6 @@ html.is-about-open #about-page {
 	letter-spacing: -0.03em;
 	text-transform: uppercase;
 }
-
 .slider-telemetry {
 	display: flex;
 	flex-direction: column;
@@ -437,7 +328,7 @@ html.is-about-open #about-page {
 	transition: transform .95s var(--ease-out);
 }
 
-/* ---------- Apple-Grade Stage Carousel & Vertical Overrides ---------- */
+/* ---------- Carousels & Vertical Overrides ---------- */
 .media-strip {
 	position: relative;
 	height: 0;
@@ -450,11 +341,7 @@ html.is-about-open #about-page {
 	user-select: none;
 }
 .media-strip.dragging { cursor: grabbing; }
-
-/* 1:1 Square Override for OOH Campaigns */
-.media-strip.strip-square {
-	padding-top: calc(100% - 2 * var(--side));
-}
+.media-strip.strip-square { padding-top: calc((100% - 2 * var(--side)) * 0.62); }
 
 .track {
 	position: absolute;
@@ -486,34 +373,9 @@ html.is-about-open #about-page {
 .slide:not(.is-active):hover { opacity: 0.65; }
 .media-strip.dragging .slide { transition: opacity .5s ease, filter .5s ease; }
 
-/* Erase the gray box for square/vertical presentations to blend with the white canvas */
 .media-strip.strip-square .slide {
 	background: #ffffff;
 	border: none;
-}
-
-/* Base Media Rules (Restores Invisible JPGs) */
-.slide img, .slide video {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	pointer-events: none;
-	-webkit-user-drag: none;
-	transform: translate3d(0, var(--py, 0%), 0) scale(1.14);
-	transition: transform 1.55s var(--ease-out);
-	opacity: 1 !important;
-	visibility: visible !important;
-}
-
-/* Vertical Asset Overrides (Prevents Cropping & Disables Parallax Drift) */
-/* =========================================
-   OOH Campaign Presentation Overrides
-   ========================================= */
-
-/* Shrinks the entire invisible container to perfectly wrap the scaled-down assets, killing the white gap */
-.media-strip.strip-square {
-	padding-top: calc((100% - 2 * var(--side)) * 0.62);
 }
 
 /* Base Media Rules */
@@ -530,13 +392,7 @@ html.is-about-open #about-page {
 	visibility: visible !important;
 }
 
-/* Erase default borders and gray background to blend perfectly with the white canvas */
-.media-strip.strip-square .slide {
-	background: #ffffff; 
-	border: none;
-}
-
-/* Exact Formatting for Vertical Presentation Assets */
+/* Vertical Asset Overrides */
 .slide img.vertical-asset, 
 .slide video.vertical-asset {
 	object-fit: contain !important;
@@ -549,7 +405,6 @@ html.is-about-open #about-page {
 	transform: translate3d(0, 0, 0) scale(1) !important;
 }
 
-/* Standard Sliding Aperture Animation (Ignored by Vertical Assets) */
 .slide.slide-open img:not(.vertical-asset), 
 .slide.slide-open video:not(.vertical-asset) {
 	animation: slideAperture 1.35s var(--ease-out);
@@ -559,7 +414,6 @@ html.is-about-open #about-page {
 	100% { transform: translate3d(0, var(--py, 0%), 0) scale(1.14); }
 }
 
-/* Maintain Scale During Scroll Animations */
 .js .media-strip:not(.in) .slide img,
 .js .media-strip:not(.in) .slide video {
 	transform: translate3d(12%, var(--py, 0%), 0) scale(1.26);
@@ -569,7 +423,6 @@ html.is-about-open #about-page {
 	transform: translate3d(0, 0, 0) scale(1);
 }
 
-/* Minimalist Short-Tailed Right Pointer */
 .next-pointer {
 	position: absolute;
 	top: 50%;
@@ -604,7 +457,7 @@ html.is-about-open #about-page {
 	50% { transform: translateX(2px); }
 }
 
-/* Unlabeled Left Metadata + Right Description Editorial Grid */
+/* ---------- Editorial Grid ---------- */
 .project-details {
 	display: grid;
 	grid-template-columns: 35% 1fr;
@@ -612,7 +465,6 @@ html.is-about-open #about-page {
 	width: 100%;
 	padding: 0 var(--side);
 }
-
 .project-meta-unlabeled {
 	grid-column: 1;
 	margin: 4px 0 0 0;
@@ -631,7 +483,6 @@ html.is-about-open #about-page {
 	font-family: var(--font-mono);
 	font-weight: 400;
 }
-
 .js .project-meta-unlabeled li {
 	opacity: 0;
 	transform: translateY(12px);
@@ -649,7 +500,6 @@ html.is-about-open #about-page {
 	width: 100%;
 	max-width: none;
 }
-
 .project-description p {
 	width: 100%;
 	max-width: none;
@@ -675,7 +525,6 @@ html.is-about-open #about-page {
 	font-weight: 400;
 	margin-right: 8px;
 }
-
 .js .project-credits {
 	opacity: 0;
 	transform: translateY(14px);
@@ -689,7 +538,6 @@ html.is-about-open #about-page {
 	position: relative;
 	padding: clamp(80px, 10vh, 120px) 0;
 }
-
 .footer-inner {
 	display: flex;
 	justify-content: space-between;
@@ -714,7 +562,7 @@ html.is-about-open #about-page {
 	text-transform: uppercase;
 }
 
-/* ---------- Masked Text Reveal (Repeats on Up/Down Scroll) ---------- */
+/* ---------- Masked Text Reveal ---------- */
 .w {
 	display: inline-block;
 	vertical-align: top;
@@ -741,7 +589,6 @@ html.is-about-open #about-page {
 	.js .media-strip:not(.in) .track { transform: none; }
 	.js .media-strip:not(.in) .slide.is-active { clip-path: none; }
 	.slide, .track { transition: none; }
-	#loader { display: none !important; }
 }
 
 /* ---------- Responsive ---------- */
@@ -752,7 +599,6 @@ html.is-about-open #about-page {
 	.about-columns { grid-template-columns: 1fr; gap: 24px; }
 	.next-pointer { right: 14px; width: 40px; height: 40px; }
 }
-
 @media (max-width: 640px) {
 	:root { --side: 5%; }
 	.header-inner { display: flex; justify-content: space-between; }
@@ -767,9 +613,6 @@ html.is-about-open #about-page {
 /* =========================================
    About Page Visibility Override
    ========================================= */
-/* Forces all text elements on the About page to bypass JS scroll animations and render instantly */
-
-#about-page .about-headline,
 #about-page .project-details,
 #about-page .project-description,
 #about-page .about-columns,
