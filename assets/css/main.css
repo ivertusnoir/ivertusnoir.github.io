@@ -15,8 +15,7 @@
 
 @font-face {
     font-family: 'Geist Mono';
-    src: url('../fonts/GeistMono-VariableFont_wght.woff2') format('woff2'),
-         url('../fonts/GeistMono-VariableFont_wght.ttf') format('truetype');
+    src: url('./fonts/GeistMono-VariableFont_wght.ttf') format('truetype');
     font-style: normal;
     font-weight: 100 900;
     font-display: swap;
@@ -256,8 +255,8 @@ html.is-about-open #about-page { display: block; }
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	min-height: 74vh;
-	min-height: clamp(520px, 74svh, 860px); /* leaves the showreel peeking above the fold */
+	min-height: 100vh;
+	min-height: 100svh;
 	padding: clamp(110px, 14vh, 160px) var(--side) clamp(36px, 6vh, 64px);
 }
 .hero-statement {
