@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: 'Inter Tight';
-    src: url('../fonts/InterTight-VariableFont_wght.woff2') format('woff2');
+    src: url('../fonts/InterTight-VariableFont_wght..ttf') format('.ttf');
     font-weight: 400 700;
     font-style: normal;
     font-display: swap;
@@ -14,7 +14,7 @@
 
 @font-face {
     font-family: 'Geist Mono';
-    src: url('../fonts/GeistMono-VariableFont_wght.woff2') format('woff2');
+    src: url('../fonts/GeistMono-VariableFont_wght..ttf') format('.ttf');
     font-weight: 400 600;
     font-style: normal;
     font-display: swap;
