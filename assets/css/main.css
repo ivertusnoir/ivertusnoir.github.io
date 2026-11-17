@@ -2,21 +2,23 @@
    MURAT GÖRKEM — APPLE LIGHT / BRUTALIST EDITORIAL V7 (FINAL)
    ========================================= */
 
-/* ---------- Self-hosted fonts ---------- */
+/* ---------- Self-hosted, variable WOFF2 fonts ---------- */
 
 @font-face {
     font-family: 'Inter Tight';
-    src: url('../fonts/InterTight-VariableFont_wght.ttf') format('truetype');
-    font-weight: 400 700;
+    src: url('../fonts/InterTight-VariableFont_wght.woff2') format('woff2'),
+         url('../fonts/InterTight-VariableFont_wght.ttf') format('truetype');
     font-style: normal;
+    font-weight: 100 900;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Geist Mono';
-    src: url('../fonts/GeistMono-VariableFont_wght..ttf') format('truetype');
-    font-weight: 400 600;
+    src: url('../fonts/GeistMono-VariableFont_wght.woff2') format('woff2'),
+         url('../fonts/GeistMono-VariableFont_wght.ttf') format('truetype');
     font-style: normal;
+    font-weight: 100 900;
     font-display: swap;
 }
 
@@ -202,7 +204,8 @@ html.is-about-open #about-page { display: block; }
 	line-height: 1.06;
 	letter-spacing: -0.035em;
 	color: var(--ink);
-	max-width: 22ch;
+	width: 100%;
+	max-width: none;
 	will-change: transform, opacity;
 }
 .about-grid { margin-bottom: clamp(56px, 8vh, 96px); }
@@ -258,6 +261,7 @@ html.is-about-open #about-page { display: block; }
 	padding: clamp(110px, 14vh, 160px) var(--side) clamp(36px, 6vh, 64px);
 }
 .hero-statement {
+	display: block;
 	width: 100%;
 	max-width: 100%;
 	margin: auto 0;
@@ -587,11 +591,12 @@ html.is-about-open #about-page { display: block; }
 /* ---------- Masked Text Reveal ---------- */
 .w {
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: baseline;
 	white-space: nowrap;
 	overflow: hidden;
 	padding: 0 .08em .16em;
 	margin: 0 -.08em -.16em;
+	max-width: 100%;
 }
 .c { display: inline-block; }
 
@@ -611,6 +616,31 @@ html.is-about-open #about-page { display: block; }
 	.js .media-strip:not(.in) .track { transform: none; }
 	.js .media-strip:not(.in) .slide.is-active { clip-path: none; }
 	.slide, .track { transition: none; }
+}
+
+/* ---------- Cross-browser text layout safeguards ---------- */
+[data-split] {
+    min-width: 0;
+}
+.hero-statement,
+.about-headline,
+.project-header h2,
+.project-description p {
+    overflow-wrap: normal;
+    word-break: normal;
+}
+@media (max-width: 640px) {
+    .hero-statement {
+        max-width: 100%;
+        font-size: clamp(2.35rem, 10vw, 4.2rem);
+    }
+    .about-headline {
+        font-size: clamp(2rem, 9vw, 4rem);
+    }
+    .project-header h2 {
+        max-width: 100%;
+        font-size: clamp(1.65rem, 8vw, 2.8rem);
+    }
 }
 
 /* ---------- Responsive ---------- */
