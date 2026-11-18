@@ -229,7 +229,7 @@
 				if (s.play) { s.currentTime = 0; var p = s.play(); if (p && p.catch) p.catch(function () {}); }
 			}
 			function stop() { clearInterval(timer); timer = null; }
-			function run() { stop(); if (!paused && visible && !d.hidden) timer = setInterval(function () { show(i + 1); }, 3000); }
+			function run() { stop(); if (!paused && visible && !d.hidden) timer = setInterval(function () { show(i + 1); }, 2000); }
 			var bar = d.createElement('div'); bar.className = 'media-controls';
 			bar.innerHTML = '<button type="button" class="mc-btn">' + (paused ? 'PLAY' : 'PAUSE') + '</button>';
 			var btn = bar.firstChild;
