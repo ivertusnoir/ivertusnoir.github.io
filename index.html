@@ -124,12 +124,13 @@
 	</script>
 	<link rel="preload" href="assets/css/fonts/InterTight-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
 	<link rel="preload" href="assets/css/fonts/GeistMono-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
-	<link rel="stylesheet" href="assets/css/main.css?v=3">
+	<link rel="stylesheet" href="assets/css/main.css?v=4">
 
 	<script>
 	(function () {
 		var r = document.documentElement; r.classList.add('js');
-		try { if (sessionStorage.getItem('mg-intro')) r.classList.add('skip-intro'); } catch (e) {}
+		/* loader plays on every direct visit; it is skipped only when arriving from another page of this site */
+		try { if (document.referrer.indexOf(location.origin) === 0) r.classList.add('skip-intro'); } catch (e) {}
 		if (location.hash === '#about') r.classList.add('is-about-open');
 	})();
 	</script>
@@ -156,7 +157,7 @@
 				<ul>
 					<li><a href="#work" data-nav-work class="is-current">WORK</a></li>
 					<li><a href="#about" data-nav-about>ABOUT</a></li>
-					<li><a href="case-studies.html">CASE STUDIES</a></li>
+					<li><a href="/case-studies/">CASE STUDIES</a></li>
 				</ul>
 			</nav>
 			<a class="header-cv" href="assets/Murat_Gorkem_CV.pdf" download>CV <span aria-hidden="true">↓</span></a>
@@ -360,6 +361,8 @@
 			</div>
 		</div>
 	</footer>
+
+	<div class="copyright"><p>© 2026 by Murat Görkem.</p></div>
 
 	<script>
 	(function () {
@@ -647,7 +650,6 @@
 				counter.textContent = pad(Math.round((gated ? e : Math.min(e, 0.92)) * 100), 3);
 				if (!bail && (p < 1 || !gated)) return rAF(step);
 				counter.textContent = '100';
-				try { sessionStorage.setItem('mg-intro', '1'); } catch (err) {}
 				setTimeout(function () { loader.classList.add('done'); setTimeout(ready, 450); }, 150);
 			})(t0);
 		}
