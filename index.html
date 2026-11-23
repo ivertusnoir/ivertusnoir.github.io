@@ -148,8 +148,12 @@
 	<style>
 	/* Media only: no sliding / transition effects between project frames (text animations untouched) */
 	.media-strip .slide, .media-strip .track, .media-strip .slide > video, .media-strip .slide > img { transition: none !important; animation: none !important; }
-	/* ONYX video: 1920x1080 sits 1:1 in the 16:9 frame (cancels main.css 1.14x zoom + parallax offset) */
-	.slide[data-click-sound] > video { width: 100%; height: 100%; object-fit: cover; object-position: center; transform: none !important; }
+	/* Keep the ONYX-only framing correction scoped to Project 01; vertical OOH assets use their original project CSS. */
+	.media-strip[aria-label="Montale Onyx project media"] .slide[data-click-sound] > video { width: 100%; height: 100%; object-fit: cover; object-position: center; transform: none !important; }
+	/* Project 01 only: keep neighboring carousel slides faintly visible as previews. */
+	.media-strip[aria-label="Montale Onyx project media"] .slide:not(.is-active) { opacity: .55 !important; visibility: visible !important; }
+	.media-strip[aria-label="Montale Onyx project media"] .slide:not(.is-active):hover { opacity: .72 !important; }
+	.media-strip[aria-label="Montale Onyx project media"] .slide.is-active { opacity: 1 !important; visibility: visible !important; z-index: 2; }
 	</style>
 </head>
 
@@ -219,30 +223,29 @@
 					</div>
 				</div>
 
-				<div class="track">
-    <div class="slide" data-click-sound>
-        <video loop muted playsinline preload="metadata"
-               poster="images/onyx_thumbnail.png"
-               aria-label="Montale Onyx 3D teaser">
-            <source src="videos/onyx_output_av1.webm" type="video/webm">
-            <source src="videos/onyx_fallback_720p.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <div class="slide">
-        <video loop muted playsinline preload="metadata"
-               poster="images/onyx_thumbnail.png"
-               class="vertical-asset">
-            <source src="videos/video_2.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <div class="slide">
-        <img src="images/onyx_thumbnail.png"
-             alt="Montale Onyx: 3D lookdev still"
-             loading="lazy" decoding="async">
-    </div>
-</div>
+				<div class="media-strip" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Montale Onyx project media">
+					<div class="track">
+						<div class="slide" data-click-sound>
+							<video muted playsinline preload="metadata" poster="images/onyx_thumbnail.png" aria-label="Montale Onyx 3D teaser">
+								<source src="videos/onyx_output_av1.webm" type="video/webm">
+								<source src="videos/onyx_fallback_720p.mp4" type="video/mp4">
+							</video>
+						</div>
+						<div class="slide" data-click-sound>
+							<video muted playsinline preload="metadata" poster="images/onyx_thumbnail.png" class="vertical-asset" aria-label="Montale Onyx alternate video">
+								<source src="videos/video_2.mp4" type="video/mp4">
+							</video>
+						</div>
+						<div class="slide">
+							<img src="images/onyx_thumbnail.png" alt="Montale Onyx: 3D lookdev still" loading="lazy" decoding="async">
+						</div>
+					</div>
+					<button type="button" class="next-pointer" aria-label="Next project frame">
+						<svg viewBox="0 0 18 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" aria-hidden="true">
+							<path d="M2 8h13M10 3l5 5-5 5"/>
+					</svg>
+					</button>
+				</div>
 
 				<div class="project-details reveal">
 					<ul class="project-meta-unlabeled" aria-label="Project specifications"><li>Speculative · Packaging &amp; motion</li><li>Design, compositing &amp; sound</li><li>After Effects, Illustrator, Ableton, Blender</li><li class="is-muted">2026</li></ul>
@@ -266,8 +269,8 @@
 
 				<div class="media-strip strip-square" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Young Ones Vote project media">
 					<div class="track">
-						<div class="slide"><video loop muted playsinline preload="metadata" poster="images/murat-gorkem-vote-hud.jpg" aria-label="Young Ones vote campaign, mockup" class="vertical-asset" src="videos/murat-gorkem-vote-mockup.mp4"></video></div>
-						<div class="slide"><video loop muted playsinline preload="metadata" poster="images/murat-gorkem-vote-hud.jpg" aria-label="Young Ones vote campaign, OOH" class="vertical-asset" src="videos/murat-gorkem-vote-ooh.mp4"></video></div>
+						<div class="slide" data-click-sound><video muted playsinline preload="metadata" poster="images/murat-gorkem-vote-hud.jpg" aria-label="Young Ones vote campaign, mockup" class="vertical-asset" src="videos/murat-gorkem-vote-mockup.mp4"></video></div>
+						<div class="slide" data-click-sound><video muted playsinline preload="metadata" poster="images/murat-gorkem-vote-hud.jpg" aria-label="Young Ones vote campaign, OOH" class="vertical-asset" src="videos/murat-gorkem-vote-ooh.mp4"></video></div>
 						<div class="slide"><img src="images/murat-gorkem-vote-hud.jpg" class="vertical-asset" alt="Young Ones campaign: HUD ring interface detail" loading="lazy" decoding="async"></div>
 					</div>
 					<button type="button" class="next-pointer" aria-label="Next project frame">
@@ -299,7 +302,7 @@
 
 				<div class="media-strip" tabindex="0" role="region" aria-roledescription="carousel" aria-label="NOIRE project media">
 					<div class="track">
-						<div class="slide"><video loop muted playsinline preload="metadata" poster="images/muratgorkem_NOIRE_art1.jpg" aria-label="NOIRE audio-visual study" src="videos/muratgorkem_NOIRE_websitecut.mp4"></video></div>
+						<div class="slide" data-click-sound><video muted playsinline preload="metadata" poster="images/muratgorkem_NOIRE_art1.jpg" aria-label="NOIRE audio-visual study" src="videos/muratgorkem_NOIRE_websitecut.mp4"></video></div>
 						<div class="slide"><img src="images/muratgorkem_NOIRE_art1.jpg" alt="NOIRE still: monochrome concrete pillar with a typographic overlay" loading="lazy" decoding="async"></div>
 						<div class="slide"><img src="images/muratgorkem_NOIRE_art2.jpg" alt="NOIRE still: monochrome ring-shaped object in a concrete space" loading="lazy" decoding="async"></div>
 					</div>
@@ -332,7 +335,7 @@
 
 				<div class="media-strip" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Rammstein Sonne cover media">
 					<div class="track">
-						<div class="slide"><video loop muted playsinline preload="metadata" poster="images/muratgorkem__sonnecover_art1.jpg" aria-label="Sonne cover performance visual" src="videos/muratgorkem_webcropped_sonnecover.mp4"></video></div>
+						<div class="slide" data-click-sound><video muted playsinline preload="metadata" poster="images/muratgorkem__sonnecover_art1.jpg" aria-label="Sonne cover performance visual" src="videos/muratgorkem_webcropped_sonnecover.mp4"></video></div>
 						<div class="slide"><img src="images/muratgorkem__sonnecover_art1.jpg" alt="Sonne cover still: oversized kinetic typography frame" loading="lazy" decoding="async"></div>
 						<div class="slide"><img src="images/muratgorkem__sonnecover_art2.jpg" alt="Sonne cover still: graphic frame from the performance visual" loading="lazy" decoding="async"></div>
 					</div>
@@ -353,7 +356,7 @@
 			</article>
 
 			<!-- TEMPLATE: copy an <article class="project"> block to add work. For a process/breakdown clip, add one more
-			     <div class="slide"><video loop muted playsinline preload="metadata" poster="images/x.jpg" src="videos/x-breakdown.mp4"></video></div> to a .track. -->
+			     <div class="slide" data-click-sound><video muted playsinline preload="metadata" poster="images/x.jpg" src="videos/x-breakdown.mp4"></video></div> to a .track. -->
 
 		</main> 
 	</div>
@@ -542,8 +545,17 @@
 			var count = strip.parentNode.querySelector('.slider-count');
 			var bar = strip.parentNode.querySelector('.slider-bar');
 			var sx = 0, dx = 0, down = false, moved = false, stripIsVisible = false;
+			var imageReturnTimer = null;
+			var returnImageToFirst = strip.getAttribute('aria-label') === 'Montale Onyx project media';
 
-			slides.forEach(function (s) { s._wasDragged = function () { return moved; }; var v = s.querySelector('video'); if (v) addControls(s, v); });
+			slides.forEach(function (s, i) {
+				s._wasDragged = function () { return moved; };
+				var v = s.querySelector('video');
+				if (v) {
+					addControls(s, v);
+					v.addEventListener('ended', function () { if (i === a && stripIsVisible) go(a + 1); });
+				}
+			});
 
 			new IntersectionObserver(function (entries) {
 				entries.forEach(function (e) { stripIsVisible = e.isIntersecting; syncVideos(); });
@@ -571,7 +583,13 @@
 				if (bar) bar.style.transform = 'scaleX(' + ((a + 1) / n).toFixed(3) + ')';
 				syncVideos();
 			}
-			function go(i) { a = ((i % n) + n) % n; render(false); }
+			function go(i) {
+				if (imageReturnTimer) { window.clearTimeout(imageReturnTimer); imageReturnTimer = null; }
+				a = ((i % n) + n) % n; render(false);
+				if (returnImageToFirst && slides[a].querySelector('img')) {
+					imageReturnTimer = window.setTimeout(function () { go(0); }, 3000);
+				}
+			}
 			render(true);
 
 			if (nextBtn) {
