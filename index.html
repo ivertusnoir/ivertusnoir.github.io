@@ -9,7 +9,7 @@
 	<link rel="apple-touch-icon" href="/favicon.png">
 
 	<!-- SEO:START -->
-	<meta name="description" content="Murat Görkem is a motion designer and sound designer in Ankara, Turkey. Kinetic typography, out-of-home motion and original audio-visual work.">
+	<meta name="description" content="Murat Görkem is a motion designer and sound designer in Ankara, Türkiye. Packaging motion, kinetic typography, out-of-home campaigns and original audio-visual work.">
 	<meta name="author" content="Murat Görkem">
 	<meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1">
 	<meta name="theme-color" content="#ffffff">
@@ -19,14 +19,14 @@
 	<meta property="og:locale" content="en_US">
 	<meta property="og:url" content="https://muratgorkem.com/">
 	<meta property="og:title" content="Murat Görkem — Motion Designer & Sound Designer, Ankara">
-	<meta property="og:description" content="Murat Görkem is a motion designer and sound designer in Ankara, Turkey. Kinetic typography, out-of-home motion and original audio-visual work.">
+	<meta property="og:description" content="Murat Görkem is a motion designer and sound designer in Ankara, Türkiye. Packaging motion, kinetic typography, out-of-home campaigns and original audio-visual work.">
 	<meta property="og:image" content="https://muratgorkem.com/images/preview.jpg">
 	<meta property="og:image:width" content="1200">
 	<meta property="og:image:height" content="630">
 	<meta property="og:image:alt" content="Murat Görkem — Motion &amp; Sound Design">
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="Murat Görkem — Motion Designer & Sound Designer, Ankara">
-	<meta name="twitter:description" content="Murat Görkem is a motion designer and sound designer in Ankara, Turkey. Kinetic typography, out-of-home motion and original audio-visual work.">
+	<meta name="twitter:description" content="Murat Görkem is a motion designer and sound designer in Ankara, Türkiye. Packaging motion, kinetic typography, out-of-home campaigns and original audio-visual work.">
 	<meta name="twitter:image" content="https://muratgorkem.com/images/preview.jpg">
 	<meta name="twitter:image:alt" content="Murat Görkem — Motion &amp; Sound Design">
 	<script type="application/ld+json">
@@ -40,7 +40,7 @@
    "url": "https://muratgorkem.com/",
    "email": "mailto:hello@muratgorkem.com",
    "jobTitle": "Motion Designer & Sound Designer",
-   "description": "Murat Görkem is a motion designer and sound designer in Ankara, Turkey. Kinetic typography, out-of-home motion and original audio-visual work.",
+   "description": "Murat Görkem is a motion designer and sound designer in Ankara, Türkiye. Packaging motion, kinetic typography, out-of-home campaigns and original audio-visual work.",
    "address": {
     "@type": "PostalAddress",
     "addressLocality": "Ankara",
@@ -48,11 +48,14 @@
    },
    "knowsAbout": [
     "Motion design",
+    "2D packaging design",
     "Kinetic typography",
     "Out-of-home motion",
     "Sound design",
     "Audio-reactive animation",
     "After Effects",
+    "Blender",
+    "Ableton Live",
     "Generative imagery"
    ],
    "sameAs": [
@@ -77,7 +80,7 @@
    "@id": "https://muratgorkem.com/#webpage",
    "url": "https://muratgorkem.com/",
    "name": "Murat Görkem — Motion Designer & Sound Designer, Ankara",
-   "description": "Murat Görkem is a motion designer and sound designer in Ankara, Turkey. Kinetic typography, out-of-home motion and original audio-visual work.",
+   "description": "Murat Görkem is a motion designer and sound designer in Ankara, Türkiye. Packaging motion, kinetic typography, out-of-home campaigns and original audio-visual work.",
    "isPartOf": {
     "@id": "https://muratgorkem.com/#website"
    },
@@ -116,23 +119,12 @@
    "dateCreated": "2026",
    "genre": "Audio-visual motion study",
    "url": "https://www.youtube.com/watch?v=kDASMdGe5AM"
-  },
-  {
-   "@type": "CreativeWork",
-   "name": "Rammstein — Sonne — Performance Visual",
-   "creator": {
-    "@id": "https://muratgorkem.com/#person"
-   },
-   "dateCreated": "2026",
-   "genre": "Cover and performance visual",
-   "url": "https://www.youtube.com/watch?v=OzTGWnlOWNU"
   }
  ]
 }
 	</script>
 	<!-- SEO:END -->
 
-	</script>
 	<link rel="preload" href="assets/css/fonts/InterTight-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
 	<link rel="preload" href="assets/css/fonts/GeistMono-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
 	<link rel="stylesheet" href="assets/css/main.css?v=4">
@@ -154,6 +146,19 @@
 	.media-strip[aria-label="Montale Onyx project media"] .slide:not(.is-active) { opacity: .55 !important; visibility: visible !important; }
 	.media-strip[aria-label="Montale Onyx project media"] .slide:not(.is-active):hover { opacity: .72 !important; }
 	.media-strip[aria-label="Montale Onyx project media"] .slide.is-active { opacity: 1 !important; visibility: visible !important; z-index: 2; }
+	/* Minimal 1-line Archive & Experiments strip */
+	.archive-strip { border-top: 1px solid rgba(0, 0, 0, .12); margin-top: clamp(3rem, 7vw, 6rem); padding: clamp(2rem, 4vw, 3rem) 0 1rem; }
+	.archive-list { list-style: none; margin: 1.25rem 0 0; padding: 0; border-top: 1px solid rgba(0, 0, 0, .08); }
+	.archive-list li { border-bottom: 1px solid rgba(0, 0, 0, .08); }
+	.archive-list a { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.2fr) auto; align-items: baseline; gap: 1rem 1.5rem; padding: 1.05rem 0; color: inherit; text-decoration: none; transition: opacity .25s ease; }
+	.archive-list a:hover { opacity: .62; }
+	.archive-title { font-weight: 500; letter-spacing: -.01em; }
+	.archive-meta { font-size: .85em; opacity: .58; }
+	.archive-link { font-size: .78em; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
+	@media (max-width: 720px) {
+		.archive-list a { grid-template-columns: 1fr auto; gap: .35rem 1rem; }
+		.archive-meta { grid-column: 1 / -1; order: 3; }
+	}
 	</style>
 </head>
 
@@ -191,7 +196,7 @@
 		<section id="banner">
 			<h1 class="hero-statement" data-split="chars" data-intro>visual communication,<br>motion design,<br>sound design.</h1>
 			<div class="banner-footer">
-				<p class="status"><span class="status-dot" aria-hidden="true"></span>Available for roles &amp; collaborations <span class="muted">· Ankara, TR (GMT+3)</span></p>
+				<p class="status"><span class="status-dot" aria-hidden="true"></span>Available for full-time &amp; remote roles <span class="muted">· Ankara, TR (GMT+3)</span></p>
 				<a href="#work" class="scroll-arrow" aria-label="Scroll to work">
 					<span class="scroll-arrow-track">
 						<svg class="scroll-arrow-svg" viewBox="0 0 20 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true">
@@ -226,7 +231,7 @@
 				<div class="media-strip" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Montale Onyx project media">
 					<div class="track">
 						<div class="slide" data-click-sound>
-							<video muted playsinline preload="metadata" poster="images/onyx_thumbnail.png" aria-label="Montale Onyx 3D teaser">
+							<video muted playsinline preload="metadata" poster="images/onyx_thumbnail.png" aria-label="Montale Onyx motion teaser">
 								<source src="videos/onyx_output_av1.webm" type="video/webm">
 								<source src="videos/onyx_fallback_720p.mp4" type="video/mp4">
 							</video>
@@ -243,7 +248,7 @@
 					<button type="button" class="next-pointer" aria-label="Next project frame">
 						<svg viewBox="0 0 18 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" aria-hidden="true">
 							<path d="M2 8h13M10 3l5 5-5 5"/>
-					</svg>
+						</svg>
 					</button>
 				</div>
 
@@ -255,7 +260,8 @@
 					</div>
 				</div>
 			</article>
-<!-- Project 02 -->
+
+			<!-- Project 02 -->
 			<article class="project">
 				<div class="project-header">
 					<div class="project-title-wrap">
@@ -278,7 +284,7 @@
 							<path d="M2 8h13M10 3l5 5-5 5"/>
 						</svg>
 					</button>
-				</div> 
+				</div>
 
 				<div class="project-details reveal">
 					<ul class="project-meta-unlabeled" aria-label="Project specifications"><li>Brief-based · Out-of-home motion</li><li>Design, motion &amp; compositing</li><li>After Effects, ComfyUI</li><li class="is-muted">2026</li></ul>
@@ -288,7 +294,8 @@
 					</div>
 				</div>
 			</article>
-			
+
+			<!-- Project 03 -->
 			<article class="project">
 				<div class="project-header">
 					<div class="project-title-wrap">
@@ -321,44 +328,25 @@
 					</div>
 				</div>
 			</article>
-			
-			<article class="project">
-				<div class="project-header">
-					<div class="project-title-wrap">
-						<h2 data-split="chars">RAMMSTEIN — SONNE —<br>PERFORMANCE VISUAL</h2>
-					</div>
-					<div class="slider-telemetry" aria-hidden="true">
-						<span class="slider-count">01 / 03</span>
-						<div class="slider-progress"><span class="slider-bar"></span></div>
-					</div>
-				</div>
 
-				<div class="media-strip" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Rammstein Sonne cover media">
-					<div class="track">
-						<div class="slide" data-click-sound><video muted playsinline preload="metadata" poster="images/muratgorkem__sonnecover_art1.jpg" aria-label="Sonne cover performance visual" src="videos/muratgorkem_webcropped_sonnecover.mp4"></video></div>
-						<div class="slide"><img src="images/muratgorkem__sonnecover_art1.jpg" alt="Sonne cover still: oversized kinetic typography frame" loading="lazy" decoding="async"></div>
-						<div class="slide"><img src="images/muratgorkem__sonnecover_art2.jpg" alt="Sonne cover still: graphic frame from the performance visual" loading="lazy" decoding="async"></div>
-					</div>
-					<button type="button" class="next-pointer" aria-label="Next project frame">
-						<svg viewBox="0 0 18 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" aria-hidden="true">
-							<path d="M2 8h13M10 3l5 5-5 5"/>
-						</svg>
-					</button>
-				</div>
-
-				<div class="project-details reveal">
-					<ul class="project-meta-unlabeled has-link" aria-label="Project specifications"><li>Self-initiated · Cover &amp; performance visual</li><li>Audio, cinematography &amp; motion</li><li class="is-muted">2026</li><li class="meta-link-item"><a class="meta-link" href="https://www.youtube.com/watch?v=OzTGWnlOWNU" target="_blank" rel="noopener" aria-label="Full version of the Sonne cover on YouTube (opens in a new tab)">FULL VERSION</a></li></ul>
-					<div class="project-description">
-						<p data-split="words">A complete audio cover of Rammstein’s “Sonne” with an integrated performance visual. Engineered with dual-tracked, down-tuned guitars and cut to the track with phase-aligned sync. Stark cinematography and cyan-red grading anchor the look, with kinetic typography deployed as glitch-mapped German lyric callouts locked to the track’s percussive hits.</p>
-						<p class="project-credits"><span>CINEMATOGRAPHY, AUDIO &amp; MOTION</span> MURAT GÖRKEM</p>
-					</div>
-				</div>
-			</article>
+			<!-- Archive & Experiments -->
+			<section class="archive-strip reveal" aria-label="Additional experiments and archive">
+				<span class="mono-label">ARCHIVE &amp; EXPERIMENTS</span>
+				<ul class="archive-list">
+					<li>
+						<a href="https://www.youtube.com/watch?v=OzTGWnlOWNU" target="_blank" rel="noopener" aria-label="Watch Rammstein Sonne performance visual on YouTube (opens in a new tab)">
+							<span class="archive-title">Rammstein: Sonne — Performance Visual</span>
+							<span class="archive-meta">Cinematography, Audio Sync &amp; Kinetic Type · 2026</span>
+							<span class="archive-link" aria-hidden="true">YOUTUBE ↗</span>
+						</a>
+					</li>
+				</ul>
+			</section>
 
 			<!-- TEMPLATE: copy an <article class="project"> block to add work. For a process/breakdown clip, add one more
 			     <div class="slide" data-click-sound><video muted playsinline preload="metadata" poster="images/x.jpg" src="videos/x-breakdown.mp4"></video></div> to a .track. -->
 
-		</main> 
+		</main>
 	</div>
 
 	<!-- ==================== SEPARATE ABOUT PAGE VIEW ==================== -->
@@ -372,10 +360,10 @@
 				<ul class="project-meta-unlabeled">
 					<li>Ankara, TR (GMT+3)</li>
 					<li>Motion &amp; Sound Design</li>
-					<li class="is-status">Available for roles &amp; collaborations</li>
+					<li class="is-status">Available for full-time &amp; remote roles</li>
 				</ul>
 				<div class="project-description">
-					<p>Operating across kinetic typography, out-of-home motion and audio-driven edits. Projects synthesize generative imagery, hand-built After Effects expressions and original sound design. Open to motion design roles and collaborations.</p>
+					<p>Operating across packaging motion, kinetic typography, out-of-home campaigns and audio-driven edits. Projects combine 2D graphic systems, restrained 3D lighting, generative workflows, expression-driven After Effects rigs and original sound design. Open to full-time and remote motion design roles.</p>
 				</div>
 			</div>
 
@@ -389,14 +377,13 @@
 					<div class="about-columns">
 						<div>
 							<h3>Motion &amp; Design</h3>
-							<p>Motion design, kinetic typography, out-of-home (OOH) campaigns, expression-driven motion systems, brand and packaging visuals, audio-reactive compositing.</p>
+							<p>Motion design, 2D packaging systems, kinetic typography, out-of-home (OOH) campaigns, expression-driven motion rigs, low-key 3D lighting staging, and audio-reactive compositing.</p>
 						</div>
 						<div>
 							<h3>Tools</h3>
-							<p>After Effects, Premiere Pro, Photoshop, Illustrator, ComfyUI (generative imagery), Waveform DAW (original scoring and mixing).</p>
+							<p>After Effects, Illustrator, Photoshop, Premiere Pro, Blender (Cycles), ComfyUI &amp; Kling AI (generative workflows), Ableton Live &amp; Waveform DAW (original scoring, foley and mixing).</p>
 						</div>
 					</div>
-					<!-- ADD from your CV: a short experience / education list here. -->
 					<div class="about-links">
 						<a href="assets/Murat_Gorkem_CV.pdf" class="back-to-work" download><span>DOWNLOAD CV (PDF)</span><svg viewBox="0 0 18 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" aria-hidden="true"><path d="M9 2v11M4 8l5 5 5-5"/></svg></a>
 						<a href="#work" class="back-to-work">
@@ -415,8 +402,7 @@
 			<div class="footer-cta">
 				<span class="mono-label">DIRECT TRANSMISSION</span>
 				<a href="mailto:hello@muratgorkem.com" class="footer-email">hello@muratgorkem.com</a>
-				<p class="status"><span class="status-dot" aria-hidden="true"></span>Available for roles &amp; collaborations <span class="muted">· Ankara, TR (GMT+3)</span></p>
-				<!-- Add here if true: "Open to remote work / relocation". -->
+				<p class="status"><span class="status-dot" aria-hidden="true"></span>Available for full-time &amp; remote roles <span class="muted">· Ankara, TR (GMT+3)</span></p>
 			</div>
 			<div class="footer-links">
 				<a href="assets/Murat_Gorkem_CV.pdf" download>CV (PDF)</a>
@@ -574,9 +560,8 @@
 					var wrap = !first && Math.abs(k - prev[i]) > 1;
 					if (wrap) s.style.transition = 'none';
 					s.style.setProperty('--k', k);
-					var becameActive = (k === 0 && prev[i] !== 0 && !first);
 					s.classList.toggle('is-active', k === 0);
-										if (wrap) { void s.offsetWidth; s.style.transition = ''; }
+					if (wrap) { void s.offsetWidth; s.style.transition = ''; }
 					prev[i] = k;
 				});
 				if (count) count.textContent = pad(a + 1) + ' / ' + pad(n);
@@ -742,7 +727,6 @@
 		}
 	})();
 	</script>
-
 
 </body>
 </html>
