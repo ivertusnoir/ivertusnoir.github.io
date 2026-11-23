@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Case Studies — Murat Görkem, Motion &amp; Sound Design</title>
-	<meta name="description" content="Case studies by Murat Görkem: kinetic OOH motion, an audio-visual study and a performance visual, broken down by brief, process and tools.">
+	<meta name="description" content="Case studies by Murat Görkem: speculative packaging motion, kinetic OOH campaign and audio-visual study, broken down by brief, process and tools.">
 	<link rel="canonical" href="https://muratgorkem.com/case-studies/">
 	<meta name="robots" content="index, follow, max-image-preview:large">
 	<meta name="theme-color" content="#ffffff">
@@ -12,7 +12,7 @@
 	<meta property="og:site_name" content="Murat Görkem">
 	<meta property="og:url" content="https://muratgorkem.com/case-studies/">
 	<meta property="og:title" content="Case Studies — Murat Görkem">
-	<meta property="og:description" content="Case studies by Murat Görkem: kinetic OOH motion, an audio-visual study and a performance visual, broken down by brief, process and tools.">
+	<meta property="og:description" content="Case studies by Murat Görkem: speculative packaging motion, kinetic OOH campaign and audio-visual study, broken down by brief, process and tools.">
 	<meta property="og:image" content="https://muratgorkem.com/images/preview.jpg">
 	<meta name="twitter:card" content="summary_large_image">
 	<link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -22,6 +22,21 @@
 	<link rel="preload" href="/assets/css/fonts/GeistMono-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
 	<link rel="stylesheet" href="/assets/css/main.css?v=4">
 	<script>document.documentElement.classList.add('js','ready');</script>
+	<style>
+	/* Minimal 1-line Archive & Experiments strip (matches homepage system) */
+	.archive-strip { border-top: 1px solid rgba(0, 0, 0, .12); margin-top: clamp(3rem, 7vw, 6rem); padding: clamp(2rem, 4vw, 3rem) 0 1rem; }
+	.archive-list { list-style: none; margin: 1.25rem 0 0; padding: 0; border-top: 1px solid rgba(0, 0, 0, .08); }
+	.archive-list li { border-bottom: 1px solid rgba(0, 0, 0, .08); }
+	.archive-list a { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.2fr) auto; align-items: baseline; gap: 1rem 1.5rem; padding: 1.05rem 0; color: inherit; text-decoration: none; transition: opacity .25s ease; }
+	.archive-list a:hover { opacity: .62; }
+	.archive-title { font-weight: 500; letter-spacing: -.01em; }
+	.archive-meta { font-size: .85em; opacity: .58; }
+	.archive-link { font-size: .78em; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
+	@media (max-width: 720px) {
+		.archive-list a { grid-template-columns: 1fr auto; gap: .35rem 1rem; }
+		.archive-meta { grid-column: 1 / -1; order: 3; }
+	}
+	</style>
 </head>
 <body>
 	<header id="header">
@@ -48,226 +63,174 @@
 	<main class="cs-page">
 		<div class="cs-intro">
 			<h1 class="about-headline" data-split="words" data-intro>Case studies: brief, pipeline, output.</h1>
-			<p class="cs-lede">Four projects broken down by premise, process and tools.</p>
+			<p class="cs-lede">Three projects broken down by premise, process and tools.</p>
 		</div>
-		
-<article class="cs" id="montale-onyx">
-    <div class="cs-head">
-        <h2>Montale Onyx</h2>
-    </div>
 
-    <figure class="cs-figure" data-slideshow>
-        <img class="cs-slide is-active" src="/case-studies\onyx_case/ONYX_CASE-01.png" alt="Montale Onyx project still 1">
+		<article class="cs" id="montale-onyx">
+			<div class="cs-head">
+				<h2>Montale Onyx</h2>
+			</div>
 
-        <img class="cs-slide" src="/case-studies\onyx_case/ONYX_CASE-02.png" alt="Montale Onyx project still 2" loading="lazy">
-        <img class="cs-slide" src="/case-studies\onyx_case/ONYX_CASE-03.png" alt="Montale Onyx project still 2" loading="lazy">
-        <img class="cs-slide" src="/case-studies\onyx_case/ONYX_CASE-04.png" alt="Montale Onyx project still 2" loading="lazy">
-        <img class="cs-slide" src="/case-studies\onyx_case/ONYX_CASE-05.png" alt="Montale Onyx project still 2" loading="lazy">
-        <img class="cs-slide" src="/case-studies\onyx_case/ONYX_CASE-06.png" alt="Montale Onyx project still 2" loading="lazy">
-        <img class="cs-slide" src="/case-studies\onyx_case/ONYX_CASE-07.png" alt="Montale Onyx project still 2" loading="lazy">
-        <img class="cs-slide" src="/case-studies\onyx_case/ONYX_CASE-08.png" alt="Montale Onyx project still 2" loading="lazy">
-    </figure>
+			<figure class="cs-figure" data-slideshow>
+				<img class="cs-slide is-active" src="/case-studies/onyx_case/ONYX_CASE-01.png" alt="Montale Onyx hero monolith lookdev cover">
+				<img class="cs-slide" src="/case-studies/onyx_case/ONYX_CASE-02.png" alt="Montale Onyx 2D packaging flat layout — back and front panels" loading="lazy">
+				<img class="cs-slide" src="/case-studies/onyx_case/ONYX_CASE-03.png" alt="Montale Onyx Illustrator packaging grid system" loading="lazy">
+				<img class="cs-slide" src="/case-studies/onyx_case/ONYX_CASE-04.png" alt="Montale Onyx Blender Cycles clay lighting versus final shader lookdev" loading="lazy">
+				<img class="cs-slide" src="/case-studies/onyx_case/ONYX_CASE-05.png" alt="Montale Onyx 4-act editorial storyboard matrix" loading="lazy">
+				<img class="cs-slide" src="/case-studies/onyx_case/ONYX_CASE-06.png" alt="Montale Onyx After Effects expression-driven millimeter telemetry" loading="lazy">
+				<img class="cs-slide" src="/case-studies/onyx_case/ONYX_CASE-07.png" alt="Montale Onyx Ableton Live 120 BPM arrangement and foley timeline" loading="lazy">
+				<img class="cs-slide" src="/case-studies/onyx_case/ONYX_CASE-08.png" alt="Montale Onyx final brand lockup and speculative project credits" loading="lazy">
+			</figure>
 
-    <div class="project-details reveal">
-        <ul class="project-meta-unlabeled" aria-label="Project specifications">
-            <li>Speculative · Packaging &amp; motion</li>
-            <li>Design, compositing &amp; sound</li>
-            <li>After Effects, Illustrator, Ableton, Blender</li>
-            <li class="is-muted">2026</li>
-        </ul>
+			<div class="project-details reveal">
+				<ul class="project-meta-unlabeled" aria-label="Project specifications">
+					<li>Speculative · Packaging &amp; motion</li>
+					<li>Design, compositing &amp; sound</li>
+					<li>After Effects, Illustrator, Ableton, Blender</li>
+					<li class="is-muted">2026</li>
+				</ul>
 
-        <div class="project-description">
-            <dl class="cs-rows">
-                <div class="cs-row">
-                    <dt>Brief</dt>
-                    <dd>Speculative limited-edition outer-sleeve packaging and teaser for Montale Paris.</dd>
-                </div>
-                <div class="cs-row">
-                    <dt>Premise</dt>
-                    <dd>Restraint, surface contrast, and sound carry luxury authority without bottle visuals.</dd>
-                </div>
-                <div class="cs-row">
-                    <dt>Execution</dt>
-                    <dd>2D packaging graphics developed in Illustrator, staged under low-key Blender lighting, and assembled in After Effects through precision compositing, expression-driven telemetry, and rhythm-led editing. Original sound design and material-driven Foley composed in Ableton Live at 120 BPM.</dd>
-                </div>
-                <div class="cs-row">
-                    <dt>Output</dt>
-                    <dd>
-                        <a class="meta-link" href="https://youtu.be/toiKRiZxXJs" target="_blank" rel="noopener">
-                            Watch the full version of ONYX on YouTube ↗
-                        </a>
-                    </dd>
-                </div>
-            </dl>
-        </div>
-    </div>
-</article>
-
-<article class="cs" id="young-ones">
-    <div class="cs-head">
-        <h2>The Young Ones: Vote</h2>
-    </div>
-
-    <figure class="cs-figure is-light" data-slideshow>
-        <img class="cs-slide is-active" src="/case-studies/vote_case/yob%20(1).png" alt="Young Ones campaign project still 1">
-
-        <img class="cs-slide" src="/case-studies/vote_case/yob%20(2).png" alt="Young Ones campaign project still 2" loading="lazy">
-        <img class="cs-slide" src="/case-studies/vote_case/yob%20(3).png" alt="Young Ones campaign project still 3" loading="lazy">
-        <img class="cs-slide" src="/case-studies/vote_case/yob%20(4).png" alt="Young Ones campaign project still 4" loading="lazy">
-        <img class="cs-slide" src="/case-studies/vote_case/yob%20(5).png" alt="Young Ones campaign project still 5" loading="lazy">
-        <img class="cs-slide" src="/case-studies/vote_case/yob%20(6).png" alt="Young Ones campaign project still 6" loading="lazy">
-
-        <video class="cs-slide" muted loop playsinline preload="none" poster="/case-studies/vote_case/yob%20(1).png" src="/videos/murat-gorkem-vote-mockup.mp4" aria-label="Young Ones campaign: placement mockup"></video>
-
-        <video class="cs-slide" muted loop playsinline preload="none" poster="/case-studies/vote_case/yob%20(1).png" src="/videos/murat-gorkem-vote-ooh.mp4" aria-label="Young Ones campaign: out-of-home asset"></video>
-    </figure>
-
-    <div class="project-details reveal">
-        <ul class="project-meta-unlabeled" aria-label="Project specifications">
-            <li>Brief-based · Out-of-home motion</li>
-            <li>Design, motion &amp; compositing</li>
-            <li>After Effects, ComfyUI</li>
-            <li class="is-muted">2026</li>
-        </ul>
-
-        <div class="project-description">
-            <dl class="cs-rows">
-                <div class="cs-row">
-                    <dt>Brief</dt>
-                    <dd>Out-of-home motion piece for The Young Ones “Get Out the Vote” campaign.</dd>
-                </div>
-                <div class="cs-row">
-                    <dt>Premise</dt>
-                    <dd>Voting is pragmatic, not a search for a perfect candidate.</dd>
-                </div>
-                <div class="cs-row">
-                    <dt>Execution</dt>
-                    <dd>A HUD-style interface where animated rings convert civic alignment into a live, calculated metric. Ring behavior is driven by After Effects expressions; supporting imagery is generated in ComfyUI.</dd>
-                </div>
-                <div class="cs-row">
-                    <dt>Delivery</dt>
-                    <dd>Vertical out-of-home assets, shown in a placement mockup.</dd>
-                </div>
-            </dl>
-        </div>
-    </div>
-
-    <!-- ADD when available: breakdown clip, process stills, outcome (views, client feedback). -->
-</article>
-
-		
-
-<article class="cs" id="noire">
-    <div class="cs-head">
-        <h2>NOIRE</h2>
-    </div>
-
-    <figure class="cs-figure" data-slideshow>
-        <img class="cs-slide is-active" src="/case-studies/noire_case/noire%20(1).png" alt="NOIRE project still 1">
-
-        <img class="cs-slide" src="/case-studies/noire_case/noire%20(2).png" alt="NOIRE project still 2" loading="lazy">
-        <img class="cs-slide" src="/case-studies/noire_case/noire%20(3).png" alt="NOIRE project still 3" loading="lazy">
-        <img class="cs-slide" src="/case-studies/noire_case/noire%20(4).png" alt="NOIRE project still 4" loading="lazy">
-        <img class="cs-slide" src="/case-studies/noire_case/noire%20(5).png" alt="NOIRE project still 5" loading="lazy">
-        <img class="cs-slide" src="/case-studies/noire_case/noire%20(6).png" alt="NOIRE project still 6" loading="lazy">
-        <img class="cs-slide" src="/case-studies/noire_case/noire%20(7).png" alt="NOIRE project still 7" loading="lazy">
-        <img class="cs-slide" src="/case-studies/noire_case/noire%20(8).png" alt="NOIRE project still 8" loading="lazy">
-        <img class="cs-slide" src="/case-studies/noire_case/noire%20(9).png" alt="NOIRE project still 9" loading="lazy">
-        <img class="cs-slide" src="/case-studies/noire_case/noire%20(10).png" alt="NOIRE project still 10" loading="lazy">
-        <img class="cs-slide" src="/case-studies/noire_case/noire%20(11).png" alt="NOIRE project still 11" loading="lazy">
-        <img class="cs-slide" src="/case-studies/noire_case/noire%20(12).png" alt="NOIRE project still 12" loading="lazy">
-    </figure>
-
-    <div class="project-details reveal">
-        <ul class="project-meta-unlabeled" aria-label="Project specifications">
-            <li>Self-initiated · Audio-visual study</li>
-            <li>Concept, score &amp; motion</li>
-            <li>After Effects, ComfyUI, Waveform</li>
-            <li class="is-muted">2026</li>
-        </ul>
-
-        <div class="project-description">
-            <dl class="cs-rows">
-                <div class="cs-row">
-                    <dt>Brief</dt>
-                    <dd>Self-initiated audiovisual study anchored by an original midtempo bass score.</dd>
-                </div>
-                <div class="cs-row">
-                    <dt>Imagery</dt>
-                    <dd>Monochrome concrete architecture generated in ComfyUI.</dd>
-                </div>
-                <div class="cs-row">
-                    <dt>Motion</dt>
-                    <dd>Expressions and keyframes in After Effects drive audio-reactive displacement. A single red accent is keyed out of the luma.</dd>
-                </div>
-                <div class="cs-row">
-                    <dt>Output</dt>
-                    <dd>
-                        <a class="meta-link" href="https://www.youtube.com/watch?v=kDASMdGe5AM" target="_blank" rel="noopener">
-                            Watch the full version of NOIRE on YouTube ↗
-                        </a>
-                    </dd>
-                </div>
-            </dl>
-        </div>
-    </div>
-</article>
-
-			<!-- ADD when available: breakdown clip, process stills, outcome (views, client feedback). -->
-		
-
-<article class="cs" id="sonne">
-    <div class="cs-head">
-        <h2>Rammstein — Sonne</h2>
-    </div>
-
-    <figure class="cs-figure" data-slideshow>
-        <img class="cs-slide is-active" src="/case-studies/sonne_case/sonne%20(1).png" alt="Sonne cover still 1: oversized kinetic typography frame">
-
-        <img class="cs-slide" src="/case-studies/sonne_case/sonne%20(2).png" alt="Sonne cover still 2" loading="lazy">
-        <img class="cs-slide" src="/case-studies/sonne_case/sonne%20(3).png" alt="Sonne cover still 3" loading="lazy">
-        <img class="cs-slide" src="/case-studies/sonne_case/sonne%20(4).png" alt="Sonne cover still 4" loading="lazy">
-        <img class="cs-slide" src="/case-studies/sonne_case/sonne%20(5).png" alt="Sonne cover still 5" loading="lazy">
-		<img class="cs-slide" src="/case-studies/sonne_case/sonne%20(6).png" alt="Sonne cover still 6" loading="lazy">
-		<img class="cs-slide" src="/case-studies/sonne_case/sonne%20(7).png" alt="Sonne cover still 7" loading="lazy">
-    </figure>
-
-    <div class="project-details reveal">
-        <ul class="project-meta-unlabeled" aria-label="Project specifications">
-            <li>Self-initiated · Cover &amp; performance visual</li>
-            <li>Audio, cinematography &amp; motion</li>
-            <li class="is-muted">2026</li>
-        </ul>
-
-        <div class="project-description">
-            <dl class="cs-rows">
-                <div class="cs-row">
-                    <dt>Brief</dt>
-                    <dd>Complete audio cover of Rammstein’s “Sonne” with an integrated performance visual.</dd>
-                </div>
-                <div class="cs-row">
-                    <dt>Audio</dt>
-                    <dd>Dual-tracked, down-tuned guitars, with picture cut to the track using phase-aligned sync.</dd>
-                </div>
-                <div class="cs-row">
-                    <dt>Look</dt>
-                    <dd>Stark cinematography and cyan-red grading. Kinetic typography deployed as glitch-mapped German lyric callouts locked to the percussive hits.</dd>
-                </div>
-                <div class="cs-row">
-                    <dt>Output</dt>
-                    <dd>
-                        <a class="meta-link" href="https://www.youtube.com/watch?v=OzTGWnlOWNU" target="_blank" rel="noopener">
-                            Watch the full version of Sonne on YouTube ↗
-                        </a>
-                    </dd>
-                </div>
-            </dl>
-        </div>
-    </div>
-</article>
-
-			<!-- ADD when available: breakdown clip, process stills, outcome (views, client feedback). -->
+				<div class="project-description">
+					<dl class="cs-rows">
+						<div class="cs-row">
+							<dt>Brief</dt>
+							<dd>Speculative limited-edition outer-sleeve packaging and teaser for Montale Paris.</dd>
+						</div>
+						<div class="cs-row">
+							<dt>Premise</dt>
+							<dd>Restraint, surface contrast, and sound carry luxury authority without bottle visuals.</dd>
+						</div>
+						<div class="cs-row">
+							<dt>Execution</dt>
+							<dd>2D packaging graphics developed in Illustrator, staged under low-key Blender lighting, and assembled in After Effects through precision compositing, expression-driven telemetry, and rhythm-led editing. Original sound design and material-driven foley composed in Ableton Live at 120 BPM.</dd>
+						</div>
+						<div class="cs-row">
+							<dt>Output</dt>
+							<dd>
+								<a class="meta-link" href="https://youtu.be/toiKRiZxXJs" target="_blank" rel="noopener">
+									Watch the full version of ONYX on YouTube ↗
+								</a>
+							</dd>
+						</div>
+					</dl>
+				</div>
+			</div>
 		</article>
+
+		<article class="cs" id="young-ones">
+			<div class="cs-head">
+				<h2>The Young Ones: Vote</h2>
+			</div>
+
+			<figure class="cs-figure is-light" data-slideshow>
+				<img class="cs-slide is-active" src="/case-studies/vote_case/yob%20(1).png" alt="Young Ones campaign project still 1">
+				<img class="cs-slide" src="/case-studies/vote_case/yob%20(2).png" alt="Young Ones campaign project still 2" loading="lazy">
+				<img class="cs-slide" src="/case-studies/vote_case/yob%20(3).png" alt="Young Ones campaign project still 3" loading="lazy">
+				<img class="cs-slide" src="/case-studies/vote_case/yob%20(4).png" alt="Young Ones campaign project still 4" loading="lazy">
+				<img class="cs-slide" src="/case-studies/vote_case/yob%20(5).png" alt="Young Ones campaign project still 5" loading="lazy">
+				<img class="cs-slide" src="/case-studies/vote_case/yob%20(6).png" alt="Young Ones campaign project still 6" loading="lazy">
+				<video class="cs-slide" muted loop playsinline preload="none" poster="/case-studies/vote_case/yob%20(1).png" src="/videos/murat-gorkem-vote-mockup.mp4" aria-label="Young Ones campaign: placement mockup"></video>
+				<video class="cs-slide" muted loop playsinline preload="none" poster="/case-studies/vote_case/yob%20(1).png" src="/videos/murat-gorkem-vote-ooh.mp4" aria-label="Young Ones campaign: out-of-home asset"></video>
+			</figure>
+
+			<div class="project-details reveal">
+				<ul class="project-meta-unlabeled" aria-label="Project specifications">
+					<li>Brief-based · Out-of-home motion</li>
+					<li>Design, motion &amp; compositing</li>
+					<li>After Effects, ComfyUI</li>
+					<li class="is-muted">2026</li>
+				</ul>
+
+				<div class="project-description">
+					<dl class="cs-rows">
+						<div class="cs-row">
+							<dt>Brief</dt>
+							<dd>Out-of-home motion piece for The Young Ones “Get Out the Vote” campaign.</dd>
+						</div>
+						<div class="cs-row">
+							<dt>Premise</dt>
+							<dd>Voting is pragmatic, not a search for a perfect candidate.</dd>
+						</div>
+						<div class="cs-row">
+							<dt>Execution</dt>
+							<dd>A HUD-style interface where animated rings convert civic alignment into a live, calculated metric. Ring behavior is driven by After Effects expressions; supporting imagery is generated in ComfyUI.</dd>
+						</div>
+						<div class="cs-row">
+							<dt>Delivery</dt>
+							<dd>1080×1920 60fps vertical DOOH sequence, staged in an urban placement mockup.</dd>
+						</div>
+					</dl>
+				</div>
+			</div>
+		</article>
+
+		<article class="cs" id="noire">
+			<div class="cs-head">
+				<h2>NOIRE</h2>
+			</div>
+
+			<figure class="cs-figure" data-slideshow>
+				<img class="cs-slide is-active" src="/case-studies/noire_case/noire%20(1).png" alt="NOIRE project still 1">
+				<img class="cs-slide" src="/case-studies/noire_case/noire%20(2).png" alt="NOIRE project still 2" loading="lazy">
+				<img class="cs-slide" src="/case-studies/noire_case/noire%20(3).png" alt="NOIRE project still 3" loading="lazy">
+				<img class="cs-slide" src="/case-studies/noire_case/noire%20(4).png" alt="NOIRE project still 4" loading="lazy">
+				<img class="cs-slide" src="/case-studies/noire_case/noire%20(5).png" alt="NOIRE project still 5" loading="lazy">
+				<img class="cs-slide" src="/case-studies/noire_case/noire%20(6).png" alt="NOIRE project still 6" loading="lazy">
+				<img class="cs-slide" src="/case-studies/noire_case/noire%20(7).png" alt="NOIRE project still 7" loading="lazy">
+				<img class="cs-slide" src="/case-studies/noire_case/noire%20(8).png" alt="NOIRE project still 8" loading="lazy">
+				<img class="cs-slide" src="/case-studies/noire_case/noire%20(9).png" alt="NOIRE project still 9" loading="lazy">
+				<img class="cs-slide" src="/case-studies/noire_case/noire%20(10).png" alt="NOIRE project still 10" loading="lazy">
+				<img class="cs-slide" src="/case-studies/noire_case/noire%20(11).png" alt="NOIRE project still 11" loading="lazy">
+				<img class="cs-slide" src="/case-studies/noire_case/noire%20(12).png" alt="NOIRE project still 12" loading="lazy">
+			</figure>
+
+			<div class="project-details reveal">
+				<ul class="project-meta-unlabeled" aria-label="Project specifications">
+					<li>Self-initiated · Audio-visual study</li>
+					<li>Concept, score &amp; motion</li>
+					<li>After Effects, ComfyUI, Waveform</li>
+					<li class="is-muted">2026</li>
+				</ul>
+
+				<div class="project-description">
+					<dl class="cs-rows">
+						<div class="cs-row">
+							<dt>Brief</dt>
+							<dd>Self-initiated audiovisual study anchored by an original midtempo bass score.</dd>
+						</div>
+						<div class="cs-row">
+							<dt>Imagery</dt>
+							<dd>Monochrome concrete architecture generated in ComfyUI.</dd>
+						</div>
+						<div class="cs-row">
+							<dt>Motion</dt>
+							<dd>Expressions and keyframes in After Effects drive audio-reactive displacement. A single red accent is keyed out of the luma.</dd>
+						</div>
+						<div class="cs-row">
+							<dt>Output</dt>
+							<dd>
+								<a class="meta-link" href="https://www.youtube.com/watch?v=kDASMdGe5AM" target="_blank" rel="noopener">
+									Watch the full version of NOIRE on YouTube ↗
+								</a>
+							</dd>
+						</div>
+					</dl>
+				</div>
+			</div>
+		</article>
+
+		<section class="archive-strip reveal" aria-label="Additional experiments and archive">
+			<span class="mono-label">ARCHIVE &amp; EXPERIMENTS</span>
+			<ul class="archive-list">
+				<li>
+					<a href="https://www.youtube.com/watch?v=OzTGWnlOWNU" target="_blank" rel="noopener" aria-label="Watch Rammstein Sonne performance visual on YouTube (opens in a new tab)">
+						<span class="archive-title">Rammstein: Sonne — Performance Visual</span>
+						<span class="archive-meta">Cinematography, Audio Sync &amp; Kinetic Type · 2026</span>
+						<span class="archive-link" aria-hidden="true">YOUTUBE ↗</span>
+					</a>
+				</li>
+			</ul>
+		</section>
 	</main>
 
 	<footer id="contact" class="info-section">
@@ -275,8 +238,7 @@
 			<div class="footer-cta">
 				<span class="mono-label">DIRECT TRANSMISSION</span>
 				<a href="mailto:hello@muratgorkem.com" class="footer-email">hello@muratgorkem.com</a>
-				<p class="status"><span class="status-dot" aria-hidden="true"></span>Available for roles &amp; collaborations <span class="muted">· Ankara, TR (GMT+3)</span></p>
-				<!-- Add here if true: "Open to remote work / relocation". -->
+				<p class="status"><span class="status-dot" aria-hidden="true"></span>Available for full-time &amp; remote roles <span class="muted">· Ankara, TR (GMT+3)</span></p>
 			</div>
 			<div class="footer-links">
 				<a href="/assets/Murat_Gorkem_CV.pdf" download>CV (PDF)</a>
