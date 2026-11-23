@@ -91,6 +91,15 @@
   },
   {
    "@type": "CreativeWork",
+   "name": "MONTALE ONYX — Packaging Design & Motion Teaser",
+   "creator": {
+    "@id": "https://muratgorkem.com/#person"
+   },
+   "dateCreated": "2026",
+   "genre": "Speculative packaging and motion case study"
+  },
+  {
+   "@type": "CreativeWork",
    "name": "The Young Ones: Vote — Kinetic OOH Campaign",
    "creator": {
     "@id": "https://muratgorkem.com/#person"
@@ -136,6 +145,12 @@
 		if (location.hash === '#about') r.classList.add('is-about-open');
 	})();
 	</script>
+	<style>
+	/* Media only: no sliding / transition effects between project frames (text animations untouched) */
+	.media-strip .slide, .media-strip .track, .media-strip .slide > video, .media-strip .slide > img { transition: none !important; animation: none !important; }
+	/* ONYX video: 1920x1080 sits 1:1 in the 16:9 frame (cancels main.css 1.14x zoom + parallax offset) */
+	.slide[data-click-sound] > video { width: 100%; height: 100%; object-fit: cover; object-position: center; transform: none !important; }
+	</style>
 </head>
 
 <body>
@@ -196,6 +211,39 @@
 			<article class="project">
 				<div class="project-header">
 					<div class="project-title-wrap">
+						<h2 data-split="chars">MONTALE ONYX —<br>PACKAGING DESIGN &amp; MOTION TEASER</h2>
+					</div>
+					<div class="slider-telemetry" aria-hidden="true">
+						<span class="slider-count">01 / 03</span>
+						<div class="slider-progress"><span class="slider-bar"></span></div>
+					</div>
+				</div>
+
+				<div class="media-strip" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Montale Onyx project media">
+					<div class="track">
+						<div class="slide" data-click-sound><video loop muted playsinline preload="metadata" poster="images/onyx_thumbnail.png" aria-label="Montale Onyx 3D teaser"><source src="videos/onyx_output_av1.webm" type="video/webm; codecs=av01.0.05M.10,opus"><source src="videos/onyx_fallback_720p.mp4" type="video/mp4"></video></div>
+						<div class="slide"><video loop muted playsinline preload="metadata" poster="images/onyx_thumbnail.png" aria-label="Young Ones vote campaign, mockup" class="vertical-asset" src="video_2.mp4"></video></div>
+						<div class="slide"><img src="images/onyx_thumbnail.png" alt="Montale Onyx: 3D lookdev still" loading="lazy" decoding="async"></div>
+					</div>
+					<button type="button" class="next-pointer" aria-label="Next project frame">
+						<svg viewBox="0 0 18 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" aria-hidden="true">
+							<path d="M2 8h13M10 3l5 5-5 5"/>
+						</svg>
+					</button>
+				</div>
+
+				<div class="project-details reveal">
+					<ul class="project-meta-unlabeled" aria-label="Project specifications"><li>Speculative · Packaging &amp; motion</li><li>Design, compositing &amp; sound</li><li>After Effects, Illustrator, Ableton, Blender</li><li class="is-muted">2026</li></ul>
+					<div class="project-description">
+						<p data-split="words">A speculative outer-sleeve packaging system for Montale Paris, designed as 2D vector artwork in Illustrator and translated into a 21-second motion teaser. Executed end-to-end through After Effects compositing, expression-driven telemetry, and custom Ableton sound design—using restrained Blender lighting to stage the graphic system in motion.</p>
+						<p class="project-credits"><span>DESIGN, COMPOSITING &amp; SOUND</span> MURAT GÖRKEM</p>
+					</div>
+				</div>
+			</article>
+<!-- Project 02 -->
+			<article class="project">
+				<div class="project-header">
+					<div class="project-title-wrap">
 						<h2 data-split="chars">THE YOUNG ONES: VOTE —<br>KINETIC OOH CAMPAIGN</h2>
 					</div>
 					<div class="slider-telemetry" aria-hidden="true">
@@ -220,7 +268,7 @@
 				<div class="project-details reveal">
 					<ul class="project-meta-unlabeled" aria-label="Project specifications"><li>Brief-based · Out-of-home motion</li><li>Design, motion &amp; compositing</li><li>After Effects, ComfyUI</li><li class="is-muted">2026</li></ul>
 					<div class="project-description">
-						<p data-split="words">A kinetic out-of-home piece for The Young Ones “Get Out the Vote” brief. The premise: voting is pragmatic, not a search for a perfect candidate. That premise is architected as a HUD-style interface, with animated rings that convert civic alignment into a live, calculated metric. Driven by After Effects expressions and ComfyUI-generated imagery.</p>
+						<p data-split="words">A kinetic out-of-home campaign for The Young Ones “Get Out the Vote” brief. The premise: voting is pragmatic, not a search for a perfect candidate. Translated into a brutalist HUD interface where expression-driven rings convert civic alignment into a live, calculated metric.</p>
 						<p class="project-credits"><span>DESIGN &amp; MOTION</span> MURAT GÖRKEM</p>
 					</div>
 				</div>
@@ -423,6 +471,7 @@
 		function addControls(host, v) {
 			var bar = d.createElement('div');
 			bar.className = 'media-controls';
+			var clickSound = host.hasAttribute('data-click-sound');
 			bar.innerHTML = '<button type="button" class="mc-btn mc-sound" aria-label="Sound" aria-pressed="false"><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span><span>SOUND OFF</span></button><button type="button" class="mc-btn mc-play">PLAY</button>';
 			var snd = bar.children[0], pp = bar.children[1];
 			var stop = function (e) { e.stopPropagation(); };
@@ -431,6 +480,14 @@
 			snd.addEventListener('click', function () {
 				if (v.muted) { allVideos.forEach(function (o) { o.muted = true; }); v.muted = false; }
 				else v.muted = true;
+			});
+			/* ONYX: click anywhere on the video frame = sound on + restart from 0:00 (click again = mute) */
+			if (clickSound) host.addEventListener('click', function () {
+				if (!host.classList.contains('is-active') || host._wasDragged()) return;
+				if (v.muted) {
+					allVideos.forEach(function (o) { o.muted = true; });
+					v.muted = false; v.currentTime = 0; v._userPaused = false; play(v);
+				} else v.muted = true;
 			});
 			pp.addEventListener('click', function () {
 				if (v.paused) { v._userPaused = false; v._userPlayed = true; play(v); }
@@ -474,7 +531,7 @@
 			var bar = strip.parentNode.querySelector('.slider-bar');
 			var sx = 0, dx = 0, down = false, moved = false, stripIsVisible = false;
 
-			slides.forEach(function (s) { var v = s.querySelector('video'); if (v) addControls(s, v); });
+			slides.forEach(function (s) { s._wasDragged = function () { return moved; }; var v = s.querySelector('video'); if (v) addControls(s, v); });
 
 			new IntersectionObserver(function (entries) {
 				entries.forEach(function (e) { stripIsVisible = e.isIntersecting; syncVideos(); });
@@ -495,8 +552,7 @@
 					s.style.setProperty('--k', k);
 					var becameActive = (k === 0 && prev[i] !== 0 && !first);
 					s.classList.toggle('is-active', k === 0);
-					if (becameActive) { s.classList.remove('slide-open'); void s.offsetWidth; s.classList.add('slide-open'); }
-					if (wrap) { void s.offsetWidth; s.style.transition = ''; }
+										if (wrap) { void s.offsetWidth; s.style.transition = ''; }
 					prev[i] = k;
 				});
 				if (count) count.textContent = pad(a + 1) + ' / ' + pad(n);
@@ -522,7 +578,6 @@
 					strip.classList.add('dragging');
 					try { strip.setPointerCapture(e.pointerId); } catch (err) {}
 				}
-				if (moved) strip.style.setProperty('--drag', dx + 'px');
 			});
 			function end() {
 				if (!down) return;
