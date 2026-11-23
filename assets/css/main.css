@@ -782,3 +782,8 @@ html.is-about-open #about-page { display: flex; flex-direction: column; }
 	letter-spacing: 0.02em;
 	color: #fff;
 }
+
+
+/* Montale Onyx only: clearer neighboring media previews */
+.media-strip[aria-label="Montale Onyx project media"] .slide:not(.is-active) { opacity: .55 !important; visibility: visible !important; }
+.media-strip[aria-label="Montale Onyx project media"] .slide:not(.is-active):hover { opacity: .72 !important; }
